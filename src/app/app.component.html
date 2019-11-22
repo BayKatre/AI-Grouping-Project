@@ -1,21 +1,42 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
+<div class="container">
+  <h3 class="text-center">Yapay Zeka Sınıflandırma Task - BayKatre.com</h3>
+  <div class="d-flex justify-content-center">
+      <canvas #canvas style="border: 2px solid" width="1000" height="700"></canvas></div>
+      <div class="row">
+          <div class="col-3">
+              <button type="button" (click)="start()" ngbButton>Noktaları Üret!</button>
+          </div>
+          <div class="col-9 d-flex flex-nowrap">
+              <h5 class="p-2">Yeni Nokta</h5>
+              <form class="p-2 d-flex flex-nowrap" [formGroup]="pointForm" (ngSubmit)="appendPoint(pointForm.value)">
+                  <div>
+                      <label for="pointx">
+                      X:
+                      </label>
+                      <input id="x" type="text" formControlName="x" placeholder="Max 1000" required>
+                  </div>
+                  <div>
+                      <label for="pointy">
+                      Y:
+                      </label>
+                      <input id="y" type="text" formControlName="y" placeholder="Max 700" required>
+                  </div>
+                  <div>
+                      <label for="pointx">
+                          Yöntem: 
+                      </label>
+                  </div>
+                  <p>
+                      <input type="radio" value="mass" formControlName="method"> Ağırlık Merkezi
+                      <input type="radio" value="knn" formControlName="method" > KNN
+                  </p>
+                  <button class="button" type="submit">Ekle</button>
+              </form>
+          </div>
+      </div>
+      
+  
+      
+  </div>
+  
+  
