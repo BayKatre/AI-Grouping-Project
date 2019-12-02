@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AIGroupingProject"
+    }
+  },
+  "defaultProject": "AIGroupingProject",
+  "cli": {
+    "analytics": false
+  }
 }
